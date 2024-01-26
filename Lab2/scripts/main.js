@@ -61,7 +61,7 @@ const construct_list_goods = (items,products,flag) => {
 
         var heading = document.createElement("h3");
         heading.className = "price";
-        heading.innerHTML = product.price;
+        heading.innerHTML = `${product.price} $`;
         divInfo.appendChild(heading);
 
         var heading = document.createElement("h3");
@@ -124,6 +124,7 @@ const open_section = (evt,id) => {
     client = document.getElementById("customer");
     products = document.getElementById("goods_hero");
     cart = document.getElementById("Pay");
+    
 
     let new_id = "";
 

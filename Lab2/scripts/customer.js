@@ -131,6 +131,11 @@ const add_to_cart = ()=>{
     construct_list_goods(choosenProduct,next_section_inner,0);
     sum.appendChild(document.createTextNode("The total is: "+ calculate_total(choosenProduct)+"$"));
     next_section[0].appendChild(sum);
+    //<button onclick="main()">Go back to home page</button>
+    // back_btn = document.createElement("button");
+    // back_btn.innerHTML = "Go Back to the gome page";
+    // back_btn.onclick = go_back_homePage;
+    // next_section[0].appendChild(back_btn);
 }
 
 const calculate_total = (products)=>{
@@ -139,8 +144,10 @@ const calculate_total = (products)=>{
         // console.log("the single product is",products[i]);
         s = s+ parseFloat(products[i].price);
     }
+    s = s.toFixed(2);
     return s;
 }
+
 
 // toggle the styles of the navbar
 const change_tab_style = (prev_id,curr_id)=>{
@@ -150,5 +157,36 @@ const change_tab_style = (prev_id,curr_id)=>{
         let prev_section = document.getElementById(prev_id);
         prev_section.className = prev_section.className.replace("active","");
     }
+}
+
+const go_back_homePage = ()=>{
+    let tab = document.getElementsByClassName("tab");
+    let customer = document.getElementsByClassName("customer_form");
+    let goods = document.getElementsByClassName("products_filtered_btn");
+    let cart = document.getElementsByClassName("cart");
+
+    for (i = 0;i<tab.length;i++){
+        tab[i].style.display = "none"
+    }
+
+    for (i = 0;i<customer.length;i++){
+        customer[i].style.display = "none"
+    }
+
+    for (i = 0;i<goods.length;i++){
+        goods[i].style.display = "none"
+    }
+
+    for (i = 0;i<cart.length;i++){
+        cart[i].style.display = "none"
+    }
+
+    let menu = document.getElementsByClassName("menu");
+
+    for (i = 0;i<menu.length;i++){
+        menu[i].style.display = "block"
+    }
+
+
 }
 
