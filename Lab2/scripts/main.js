@@ -151,6 +151,10 @@ const open_section = (evt,id) => {
 
     // display the appropriate section
     document.getElementById(new_id).style.display = "block";  
+    if (new_id == "customer"){
+        document.getElementById("type_diet").value = "";
+        document.getElementById("type_farm").value = "";
+    }
 
     // enabling all tabs that are previous the current tab I am in.
 
