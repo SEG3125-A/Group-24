@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    text-align: center;
     list-style: none;
-    font-family:"Garamond",sans-serif;
+    font-family:"Garamond",Georgia, 'Times New Roman', Times, serif;
 }
 
 .header,.footer {
-    background-color: #3D550C;
+    background-color: #63b5f3;
     color: #fff;
     margin: 0 auto;
     text-align: center;
@@ -17,7 +18,7 @@
 }
 
 .menu {
-    padding: 1em;
+    padding: 0.5em;
     background-color: #EBEBE8;
     /* position: relative; */
 }
@@ -28,17 +29,17 @@
 
 .menu button{
     padding: 0.5em;
-    margin: 2em;
+    margin: 1em;
     text-align: center;
     font-size: 1rem;
-    background-color: #DBA40E;
+    background-color: #42b4b8;
     border-radius: 5px;
     position: sticky;
     cursor: pointer;
 }
 
 .menu button:hover{
-    background-color: #D1E2C4;
+    background-color: #3d4ad4;
 }
 
 .products {
@@ -72,7 +73,7 @@
     text-align: center;
     margin: 0 auto;
     text-align: center;
-    padding: 1.5rem;
+    padding: 0.5rem;
     background-color: rgb(244, 230, 213);
 }
 

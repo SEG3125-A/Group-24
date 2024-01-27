@@ -11,9 +11,12 @@
     <!-- Store title -->
     <div class="header">
         Miam Miam 
-        <p>Welcome to Miam Miam, your go-to destination for all your grocery needs! At Miam Miam, </p>
-        <p>we take pride in providing a seamless and delightful shopping experience that brings the freshest produce!</p>
     </div>
+
+</div>
+<p>Welcome to Miam Miam, your go-to destination for all your grocery needs! At Miam Miam, </p>
+<p>we take pride in providing a seamless and delightful shopping experience that brings the freshest produce!</p>
+</body></div>
 
     <!-- General menu -->
 
@@ -22,9 +25,7 @@
         <div class="left_btn">
             <button onclick="go_to_customer_form()">Place Order</button>
             <button onclick="go_back_homePage()">Home Page</button>
-        </div>
-        <div class="products">
-        </div>
+
     </div>
 
     <!-- Tab links, each one with an onclick event associated with it -->
@@ -33,6 +34,9 @@
         <button id="products" class="tablinks"  onclick="open_section(event,this.id)">Products</button>
         <button id="cart" class="tablinks" onclick="open_section(event,this.id)">Cart</button>
     </div>
+</div>
+<div class="products"></div>
+</div>
 
 
     <!-- Customer form -->
@@ -40,15 +44,15 @@
     <div id="customer" class="customer_form">
         <h3>Client information</h3>
         <p>Dietary Restrictions </p>
-            <div id="custom_selectA">
-                <select name="type_diet" id="type_diet" onchange="">
+        <div id="custom_selectA">
+        <select name="type_diet" id="type_diet" onchange="">
                     <option value=""></option> 
                     <option value="vegetarian">Vegetarian</option>
                     <option value="halal">Halal</option> 
                     <option value="glutenFree">Gluten-Free</option> 
                 </select>
             </div>
-
+           
         <p>Choose a category: </p>
         <div id="custom_selectB">
             <select name="type_farm" id="type_farm" onchange="">
@@ -57,7 +61,7 @@
                 <option value="non organic">Non-Organic</option> 
             </select>
         </div>
-        <button onclick="send_for_products()">Find Products</button>
+    <button onclick="show_filtered_products()">Find Products</button>
     </div>
 
     <!-- Products Filtered  -->
