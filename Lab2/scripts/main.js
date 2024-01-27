@@ -145,9 +145,9 @@ const open_section = (evt,id) => {
 
     // removing active classname on all tablinks
     tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
 
     // display the appropriate section
     document.getElementById(new_id).style.display = "block";  
