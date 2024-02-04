@@ -36,11 +36,11 @@ function introClient(){
 function populateListProductChoices(slct1, slct2) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
-	
-	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
+    
+    // s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
-	// obtain a reduced list of products based on restrictions
+    
+    // obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value);
 
     // Create an object to store products by aisle
@@ -48,7 +48,7 @@ function populateListProductChoices(slct1, slct2) {
 
     // Group products by aisle
     optionArray.forEach(function(productName) {
-        var productAisle = getProductAisle(productName); // Assume a function getProductAisle(productName) returns the aisle for a given product
+        var productAisle = getProductAisle(productName); // Assuming getProductAisle(productName) returns the aisle for a given product
         if (!productsByAisle[productAisle]) {
             productsByAisle[productAisle] = [];
         }
@@ -58,30 +58,51 @@ function populateListProductChoices(slct1, slct2) {
     // Iterate over aisles and display products
     for (var aisle in productsByAisle) {
         if (productsByAisle.hasOwnProperty(aisle)) {
+            // Create a heading for the aisle
             var aisleHeader = document.createElement("h3");
             aisleHeader.textContent = "Aisle: " + aisle;
             s2.appendChild(aisleHeader);
 
+            // Iterate over products in the current aisle
             productsByAisle[aisle].forEach(function(productName) {
-                // create the checkbox and add in HTML DOM
-                var checkbox = document.createElement("input");
-                checkbox.type = "checkbox";
-                checkbox.name = "product";
-                checkbox.value = productName;
-                s2.appendChild(checkbox);
+                // Find the product object by its name
+                var product = products.find(function(item) {
+                    return item.name === productName;
+                });
 
-                // create a label for the checkbox, and also add in HTML DOM
-                var label = document.createElement('label')
-                label.htmlFor = productName;
-                label.appendChild(document.createTextNode(productName));
-                s2.appendChild(label);
+                // Create a container for each product
+                var productContainer = document.createElement("div");
+                productContainer.classList.add("product-container");
 
-                // create a breakline node and add in HTML DOM
-                s2.appendChild(document.createElement("br"));
+                // Create a checkbox for the product
+                var productCheckbox = document.createElement("input");
+                productCheckbox.type = "checkbox";
+                productCheckbox.name = "selectedProduct";
+                productCheckbox.value = productName;
+                productCheckbox.classList.add("product-checkbox");
+
+                // Create an image element
+                var productImage = document.createElement("img");
+                productImage.src = product.src; // Set the image source
+                productImage.alt = productName; // Set alt text for accessibility
+                productImage.classList.add("product-image");
+
+                // Create a label for the product name
+                var productNameLabel = document.createElement("label");
+                productNameLabel.textContent = productName;
+
+                // Append the checkbox, image, and label to the product container
+                productContainer.appendChild(productCheckbox);
+                productContainer.appendChild(productImage);
+                productContainer.appendChild(productNameLabel);
+
+                // Append the product container to the products tab content
+                s2.appendChild(productContainer);
             });
         }
     }
 }
+
 
 // Function to determine the aisle of a product based on its category
 function getProductAisle(productName) {
@@ -99,29 +120,40 @@ function getProductAisle(productName) {
 // We build a paragraph to contain the list of selected items, and the total price
 
 function selectedItems(){
-	
-	var ele = document.getElementsByName("product");
-	var chosenProducts = [];
-	
-	var c = document.getElementById('displayCart'); 
-	c.innerHTML = "";
-	
-	// build list of selected item
-	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
-	para.appendChild(document.createElement("br"));
-	for (i = 0; i < ele.length; i++) { 
-		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
-			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
-		}
-	}
-		
-	// add paragraph and total price
-	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is $ " + getTotalPrice(chosenProducts)));
-	c.appendChild(para);
-	c.appendChild(document.createTextNode(" Thank you for shopping at Walzies! Please come again soon!" ));
-		
+    var ele = document.getElementsByName("selectedProduct");
+    var chosenProducts = [];
+    
+    // Find the displayCart element
+    var displayCart = document.getElementById('displayCart'); 
+    
+    // Clear previous content of displayCart
+    displayCart.innerHTML = "";
+
+    // Create a new unordered list element to hold the selected items
+    var ul = document.createElement("ul");
+
+    // Loop through all checkboxes to find selected items
+    for (var i = 0; i < ele.length; i++) { 
+        if (ele[i].checked) {
+            // Create a new list item element for each selected product
+            var li = document.createElement("li");
+            li.textContent = ele[i].value; // Set the text content of the list item to the product name
+            ul.appendChild(li); // Append the list item to the unordered list
+            chosenProducts.push(ele[i].value); // Add the selected product to the chosenProducts array
+        }
+    }
+
+    // Append the unordered list of selected items to the displayCart element
+    displayCart.appendChild(ul);
+
+    // Calculate and display the total price of the selected items
+    var totalPriceParagraph = document.createElement("p");
+    totalPriceParagraph.textContent = "Total Price is $ " + getTotalPrice(chosenProducts);
+    displayCart.appendChild(totalPriceParagraph);
+
+    // Thank you message
+    var thankYouMessage = document.createElement("p");
+    thankYouMessage.textContent = "Thank you for shopping at Walzies! Please come again soon!";
+    displayCart.appendChild(thankYouMessage);
 }
+

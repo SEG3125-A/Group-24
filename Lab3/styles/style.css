@@ -18,11 +18,12 @@
 .tab button {
   background-color: inherit;
   float: left;
-  border: black;
+  border: 1px solid white;
   outline: black;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+
   color: #lightcyan; /* Added color property */
 }
 
@@ -49,4 +50,15 @@
   height: 100%;
   object-fit: contain;
 }
+
+.product-container {
+    margin-bottom: 20px; /* Adjust spacing between product containers */
+}
+
+.product-image {
+    width: 100px; /* Set width of product images */
+    height: 100px; /* Set height of product images */
+    margin-right: 10px; /* Adjust spacing between image and label */
+}
+
 
