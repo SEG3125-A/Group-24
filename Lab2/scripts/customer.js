@@ -52,7 +52,8 @@ async function send_for_products() {
 
     // showing the products
     show_filtered_products(picked_items);
-    
+    // document.getElementById("type_diet").value = "";
+    // document.getElementById("type_farm").value = "";    
 }
 
 
@@ -97,6 +98,11 @@ const add_to_cart = ()=>{
     let para = document.getElementById("sum_tot");
     // sum contains the total of the items purchased
     let sum = document.getElementById("sum");
+    let btn = document.getElementsByClassName("back_btn");
+
+    for(i = 0;i<btn.length;i++){
+        btn[i].remove();
+    }
 
     next_section[0].style.display = "block";
 
@@ -132,10 +138,11 @@ const add_to_cart = ()=>{
     sum.appendChild(document.createTextNode("The total is: "+ calculate_total(choosenProduct)+"$"));
     next_section[0].appendChild(sum);
     //<button onclick="main()">Go back to home page</button>
-    // back_btn = document.createElement("button");
-    // back_btn.innerHTML = "Go Back to the gome page";
-    // back_btn.onclick = go_back_homePage;
-    // next_section[0].appendChild(back_btn);
+    back_btn = document.createElement("button");
+    back_btn.innerHTML = "Go Back to the gome page";
+    back_btn.className = "back_btn";
+    back_btn.onclick = go_back_homePage;
+    next_section[0].appendChild(back_btn);
 }
 
 const calculate_total = (products)=>{
@@ -167,6 +174,7 @@ const go_back_homePage = ()=>{
 
     for (i = 0;i<tab.length;i++){
         tab[i].style.display = "none"
+        // tab[i].innerHTML = ""
     }
 
     for (i = 0;i<customer.length;i++){

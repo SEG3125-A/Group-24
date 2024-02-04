@@ -32,7 +32,7 @@ body {
     text-align: right;
 }
 
-.menu button,.customer_form button,.products_filtered_btn button {
+.menu button,.customer_form button,.products_filtered_btn button,.back_btn{
     padding: 0.5em;
     margin: 2em;
     text-align: center;
@@ -43,7 +43,7 @@ body {
     cursor: pointer;
 }
 
-.menu button:hover,.products_filtered_btn button:hover{
+.menu button:hover,.products_filtered_btn button:hover,.back_btn:hover{
     background-color: #D1E2C4;
     cursor: pointer;
 }
