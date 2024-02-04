@@ -4,32 +4,32 @@
 
 function openInfo(evt, tabName) {
 
-	// Get all elements with class="tabcontent" and hide them
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
-	}
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
 
-	// Get all elements with class="tablinks" and remove the class "active"
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 0; i < tablinks.length; i++) {
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
 
-	// Show the current tab, and add an "active" class to the button that opened the tab
-	document.getElementById(tabName).style.display = "block";
-	evt.currentTarget.className += " active";
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
 
 }
 
 function introClient(){
-	var firstName = document.getElementById("fname").value;
-	var lastName = document.getElementById("lname").value;
-	return firstName + " " + lastName;
+    var firstName = document.getElementById("fname").value;
+    var lastName = document.getElementById("lname").value;
+    return firstName + " " + lastName;
 
 }
 
-	
+    
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
@@ -114,7 +114,7 @@ function getProductAisle(productName) {
     return "Unknown";
 }
 
-	
+    
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price

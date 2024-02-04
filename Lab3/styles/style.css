@@ -4,15 +4,23 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "sans-serif"; /* Changed font-family to Garamond */
+  font-family: "Garamond"; /* Corrected font-family to Garamond */
+}
+
+#HomePage .tabcontent {
+  text-align: center; /* Center-align text under the Home Page tab */
 }
 
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: lightblue; /* Changed background color to light blue */
+  margin-bottom: 20px;
 }
 
+body{
+  background-color: #f5f5f5 ;
+}
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
@@ -23,7 +31,9 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
   color: #lightcyan; /* Added color property */
 }
 
@@ -40,9 +50,16 @@
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
+  padding: 20px;
   border: 1px solid #ccc;
   border-top: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+.tabcontent h3{
+  font-size: 24px;
 }
 
 .imageDiv img {
@@ -53,11 +70,15 @@
 
 .product-container {
     margin-bottom: 20px; /* Adjust spacing between product containers */
+    display: flex;
+    align-items: center;
 }
 
 .product-image {
-    width: 100px; /* Set width of product images */
-    height: 100px; /* Set height of product images */
+    width: 120px; /* Set width of product images */
+    height: 120px; /* Set height of product images */
+    border: 1px solid #ccc;
+    border-radius: 5px;
     margin-right: 10px; /* Adjust spacing between image and label */
 }
 
