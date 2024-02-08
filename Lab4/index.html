@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -23,7 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
@@ -56,7 +55,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Haircut</h5>
                             <p class="card-text">Price: $30</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
+                            <a href="#form-group" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +64,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Hair Coloring</h5>
                             <p class="card-text">Price: $50</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
+                            <a href="#form-group" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -74,13 +73,55 @@
                         <div class="card-body">
                             <h5 class="card-title">Hair Styling</h5>
                             <p class="card-text">Price: $40</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
+                            <a href="#form-group" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="images/short-hair.jpg" style="width:50%" class="center">
+    <div class="text">Short Haircut</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="images/medium-hair.jpg" style="width:50%" class="center">
+    <div class="text">Medium Haircut</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="images/long-hair.jpg" style="width:50%" class="center">
+    <div class="text">Long Haircut</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="images/coloured-hair.jpg" style="width:50%" class="center">
+    <div class="text">Coloured Hair (balayage)</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
 
    <!-- Staff section -->
 <section id="staff" class="py-5 bg-light">
@@ -94,6 +135,12 @@
                     <div class="card-body">
                         <h5 class="card-title">John Doe</h5>
                         <p class="card-text">Hair Stylist</p>
+                        <a href="#profile1" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>John Doe is a highly skilled and experienced hair stylist known for his exceptional talent in creating trendy and personalized hairstyles. With over a decade of experience in the industry, John possesses a keen eye for detail and a passion for enhancing his clients' natural beauty through hairstyling. <br><br>
+
+                        His creative approach and friendly demeanor make him a favorite among clients seeking everything from classic cuts to avant-garde styles. John's dedication to staying updated on the latest trends and techniques ensures that each client receives a tailored and on-trend hairstyle that suits their individual personality and lifestyle. </p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -103,6 +150,12 @@
                     <div class="card-body">
                         <h5 class="card-title">Emma Smith</h5>
                         <p class="card-text">Hair Colorist</p>
+                        <a href="#profile2" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Emma Smith is an accomplished hair colorist with a flair for creating stunning and personalized hair color transformations. With her extensive training and years of experience in the field, Emma has established herself as a go-to expert for achieving vibrant and flattering hair colors. <br><br>
+
+                         Known for her meticulous attention to detail and artistic vision, Emma specializes in crafting bespoke color formulations that complement each client's unique features and style preferences. Whether it's subtle highlights, bold fashion shades, or natural-looking balayage, Emma's expertise and creativity ensure that every client leaves her chair feeling confident and beautiful. Her warm and friendly demeanor fosters a comfortable and enjoyable salon experience, making her a beloved professional among her clientele. </p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -112,9 +165,11 @@
                     <div class="card-body">
                         <h5 class="card-title">Sarah Johnson</h5>
                         <p class="card-text">Hair Stylist</p>
-                         <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <div id="profile" class="collapse p-3">
-                        <p>Sarah has been cutting hair for 10 years ... </p>
+                         <a href="#profile3" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile3" class="collapse p-3">
+                        <p>Sarah Johnson is a passionate and skilled hair stylist known for her exceptional talent in creating versatile and trendsetting hairstyles. With a keen eye for detail and a commitment to staying current with the latest industry trends, Sarah brings a fresh and innovative approach to every client she serves.<br><br>
+
+                         Her expertise spans a wide range of cutting and styling techniques, allowing her to tailor each haircut to suit the individual needs and preferences of her diverse clientele. Whether it's a classic bob, a chic updo, or a modern layered look, Sarah's precision and artistry ensure flawless results every time. Beyond her technical skills, Sarah is also highly regarded for her warm personality and attentive customer service, making every salon visit a memorable and enjoyable experience for her clients. </p>
                     </div>
                 </div>
             </div>
@@ -123,7 +178,7 @@
 </section>
 
     <!-- Service selection -->
-<div class="form-group">
+<div id="form-group">
     <label for="service">Select a Service:</label>
     <select class="form-control" id="service" name="service">
         <option value="haircut">Haircut</option>
@@ -149,7 +204,7 @@
 </div>
 <div class="form-group">
     <label for="phone">Phone:</label>
-    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX">
 </div>
 
 <!-- Submit Button -->
@@ -187,6 +242,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        new Splide( '#image-carousel' ).mount();
+    </script>
     
     <script src="script.js"></script>
 </body>

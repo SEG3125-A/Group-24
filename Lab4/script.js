@@ -15,6 +15,10 @@ function bookAppointment() {
         alert("Please enter your name.");
         return;
     }
+    if (phone.trim() === "" || !/^\d{3}-\d{3}-\d{4}$/.test(phone)) {
+        alert("Please enter a valid phone number in the format XXX-XXX-XXXX.");
+        return;
+    }
     if (email.trim() === "") {
         alert("Please enter your email.");
         return;
@@ -43,4 +47,39 @@ function bookAppointment() {
 function isValidEmail(email) {
     var emailVer = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailVer.test(email);
+}
+
+// Function to validate phone number format
+function isValidPhoneNum(phone) {
+    var phoneNumVer = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+    return phoneNumVer.test(phone);
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
