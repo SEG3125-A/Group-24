@@ -1,11 +1,86 @@
+/* Style sheet */
 
-/* Style sheet
-   color picker www.w3schools.com/colors/colors_picker.asp
-*/
+/* Body */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #fdf3f5; /* Light pink background */
+}
 
-/* Bootstrap default font-family is Helvetica Neue */
+/* Header */
 h1 {
-  font-family: "Times New Roman", Times, serif;
-  text-shadow: 3px 3px 1px black;
-  
+    font-family: cursive; /* Cursive font for the title */
+    text-shadow: 3px 3px 1px black;
+    color: #cc3366; /* Dark pink color for headers */
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #cc3366 !important; /* Dark pink navigation bar */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffffff; /* White color for navigation bar text */
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+/* Header section */
+.jumbotron {
+    background-color: #fff5f7; /* Lighter pink for header section */
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Service cards */
+.card {
+    border: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff5f7; /* Lighter pink for service cards */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #cc3366; /* Dark pink color for card titles */
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Form */
+.form-control {
+    border-radius: 0.5rem;
+}
+
+.btn-primary {
+    border-radius: 0.5rem;
+    background-color: #cc3366; /* Dark pink button */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #b32c5f; /* Darker shade on hover */
+}
+
+/* Staff cards */
+.card-img-top {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+/* Contact section */
+section#contact {
+    background-color: #fdf3f5; /* Light pink background for contact section */
+    padding: 3rem 0;
+    border-radius: 0.5rem;
 }
