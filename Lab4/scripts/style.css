@@ -97,6 +97,7 @@ section#contact {
 /* Hide the images by default */
 .mySlides {
   display: none;
+  font-weight: bold;
 }
 
 /* Next & previous buttons */
@@ -179,3 +180,4 @@ section#contact {
   margin-right: auto;
   width: 50%;
 }
+
