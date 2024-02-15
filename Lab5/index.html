@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Hair Salon</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="scripts/style.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">LaLa Curls & Cuts</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#staff">Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header section with logo and shop's address -->
+    <header class="jumbotron jumbotron-fluid bg-light text-center">
+        <div class="container">
+            <img src="images/transparent-logo.png" alt="Logo" class="center">
+            <p>123 Sesame Street, Narnia</p>
+        </div>
+    </header>
+
+    <!-- Services section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Services & Prices</h2>
+            <!-- Service cards with prices -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Haircut</h5>
+                            <p class="card-text">Price: $30</p>
+                            <a href="#form-group" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Coloring</h5>
+                            <p class="card-text">Price: $50</p>
+                            <a href="#form-group" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hair Styling</h5>
+                            <p class="card-text">Price: $40</p>
+                            <a href="#form-group" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="images/short-hair.jpg" style="width:50%" class="center">
+    <div class="text">Short Haircut</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="images/medium-hair.jpg" style="width:50%" class="center">
+    <div class="text">Medium Haircut</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="images/long-hair.jpg" style="width:50%" class="center">
+    <div class="text">Long Haircut</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="images/coloured-hair.jpg" style="width:50%" class="center">
+    <div class="text">Coloured Hair (balayage)</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+   <!-- Staff section -->
+<section id="staff" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Staff</h2>
+        <!-- Staff cards with information -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/hairstylistman.jpeg" class="card-img-top" alt="John Doe">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Hair Stylist</p>
+                        <a href="#profile1" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>John Doe is a highly skilled and experienced hair stylist known for his exceptional talent in creating trendy and personalized hairstyles. With over a decade of experience in the industry, John possesses a keen eye for detail and a passion for enhancing his clients' natural beauty through hairstyling. <br><br>
+
+                        His creative approach and friendly demeanor make him a favorite among clients seeking everything from classic cuts to avant-garde styles. John's dedication to staying updated on the latest trends and techniques ensures that each client receives a tailored and on-trend hairstyle that suits their individual personality and lifestyle. </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/hairstylist1.jpeg" class="card-img-top" alt="Emma Smith"> <!-- Add img tag for Emma Smith -->
+                    <div class="card-body">
+                        <h5 class="card-title">Emma Smith</h5>
+                        <p class="card-text">Hair Colorist</p>
+                        <a href="#profile2" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Emma Smith is an accomplished hair colorist with a flair for creating stunning and personalized hair color transformations. With her extensive training and years of experience in the field, Emma has established herself as a go-to expert for achieving vibrant and flattering hair colors. <br><br>
+
+                         Known for her meticulous attention to detail and artistic vision, Emma specializes in crafting bespoke color formulations that complement each client's unique features and style preferences. Whether it's subtle highlights, bold fashion shades, or natural-looking balayage, Emma's expertise and creativity ensure that every client leaves her chair feeling confident and beautiful. Her warm and friendly demeanor fosters a comfortable and enjoyable salon experience, making her a beloved professional among her clientele. </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/hairstylist2.jpeg" class="card-img-top" alt="Sarah Johnson">
+                    <div class="card-body">
+                        <h5 class="card-title">Sarah Johnson</h5>
+                        <p class="card-text">Hair Stylist</p>
+                         <a href="#profile3" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile3" class="collapse p-3">
+                        <p>Sarah Johnson is a passionate and skilled hair stylist known for her exceptional talent in creating versatile and trendsetting hairstyles. With a keen eye for detail and a commitment to staying current with the latest industry trends, Sarah brings a fresh and innovative approach to every client she serves.<br><br>
+
+                         Her expertise spans a wide range of cutting and styling techniques, allowing her to tailor each haircut to suit the individual needs and preferences of her diverse clientele. Whether it's a classic bob, a chic updo, or a modern layered look, Sarah's precision and artistry ensure flawless results every time. Beyond her technical skills, Sarah is also highly regarded for her warm personality and attentive customer service, making every salon visit a memorable and enjoyable experience for her clients. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Service selection -->
+<div id="form-group">
+    <label for="service">Select a Service:</label>
+    <select class="form-control" id="service" name="service">
+        <option value="haircut">Haircut</option>
+        <option value="haircoloring">Hair Coloring</option>
+        <option value="hairstyling">Hair Styling</option>
+    </select>
+</div>
+
+<!-- Date and Time Selection -->
+<div class="form-group">
+    <label for="datetime">Select Date and Time:</label>
+    <input type="datetime-local" id="datetime" name="datetime" class="form-control">
+</div>
+
+<!-- Contact Information Form -->
+<div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+</div>
+<div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+</div>
+<div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX">
+</div>
+
+<!-- Submit Button -->
+<button type="button" class="btn btn-primary" onclick="bookAppointment()">Book Now</button>
+
+<div>
+<div>
+  <!-- Contact section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <!-- Contact form -->
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap JS and custom scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        new Splide( '#image-carousel' ).mount();
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
