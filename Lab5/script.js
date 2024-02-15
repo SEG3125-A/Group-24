@@ -19,12 +19,8 @@ function bookAppointment() {
         alert("Please enter a valid phone number in the format XXX-XXX-XXXX.");
         return;
     }
-    if (email.trim() === "") {
-        alert("Please enter your email.");
-        return;
-    }
-    if (!isValidEmail(email)) {
-        alert("Please enter a valid email address.");
+    if (email.trim() === "" || !/[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$/.test(email)) {
+        alert("Please enter a valid email address");
         return;
     }
 
@@ -41,18 +37,6 @@ function bookAppointment() {
     // Replace this with your actual code to book the appointment
     console.log(appointment);
     alert("Your appointment has been booked! We will contact you shortly.");
-}
-
-// Function to validate email format
-function isValidEmail(email) {
-    var emailVer = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailVer.test(email);
-}
-
-// Function to validate phone number format
-function isValidPhoneNum(phone) {
-    var phoneNumVer = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
-    return phoneNumVer.test(phone);
 }
 
 let slideIndex = 1;
