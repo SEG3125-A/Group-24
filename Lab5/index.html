@@ -187,6 +187,18 @@
     </select>
 </div>
 
+<!-- Professional Selection -->
+<div class="form-group">
+    <label for="professional">Select a Professional:</label>
+    <select class="form-control" id="professional" name="professional">
+        <option value="John Doe">John Doe</option>
+        <option value="Emma Smith">Emma Smith</option>
+        <option value="Sarah Johnson">Sarah Johnson</option>
+    </select>
+</div>
+
+
+
 <!-- Date and Time Selection -->
 <div class="form-group">
     <label for="datetime">Select Date and Time:</label>
@@ -207,11 +219,50 @@
     <input type="tel" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX">
 </div>
 
+
+<!-- Bootstrap modal for payment -->
+<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">Payment Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Your payment form goes here -->
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="credit-card">Credit Card Number:</label>
+                        <input type="text" class="form-control" id="credit-card" name="credit-card">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" class="form-control" id="expiry-date" name="expiry-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" class="form-control" id="cvv" name="cvv">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- Connect the onclick event to the submitPayment() function -->
+                <button type="button" class="btn btn-primary" onclick="submitPayment()">Submit Payment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Submit Button -->
 <button type="button" class="btn btn-primary" onclick="bookAppointment()">Book Now</button>
 
 <div>
 <div>
+
   <!-- Contact section -->
     <section id="contact" class="py-5">
         <div class="container">

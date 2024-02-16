@@ -15,7 +15,11 @@ h1 {
 
 /* Navigation bar */
 .navbar {
+    overflow: hidden;
     background-color: #cc3366 !important; /* Dark pink navigation bar */
+    position: fixed;
+    top:0;
+    width: 100%;
 }
 
 .navbar-brand {
