@@ -185,3 +185,85 @@ section#contact {
   width: 50%;
 }
 
+/* Custom CSS styles for the calendar */
+.ui-datepicker {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 300px; /* Adjust the width as needed */
+}
+
+.ui-datepicker-header {
+    background-color: #cc3366; /* Dark pink background color for header */
+    color: #ffffff; /* White text color */
+}
+
+.ui-datepicker-title {
+    font-weight: bold;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    background-color: #cc3366; /* Dark pink background color for prev/next buttons */
+    color: #ffffff; /* White text color */
+    border: none;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+    background-color: #b32c5f; /* Darker shade on hover */
+}
+
+.ui-datepicker-calendar {
+    background-color: #fdf3f5; /* Light pink background color for dates */
+}
+
+.ui-state-default {
+    color: #cc3366; /* Dark pink text color for dates */
+}
+
+.ui-state-active,
+.ui-datepicker-calendar .ui-state-active {
+    background-color: #cc3366; /* Dark pink background color for active date */
+    color: #ffffff; /* White text color for active date */
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    background-color: #ffe6ea; /* Light pink background color on hover */
+}
+
+.ui-datepicker-current-day {
+    background-color: #cc3366; /* Dark pink background color for current day */
+    color: #ffffff; /* White text color for current day */
+}
+/* Additional styles for unavailable days */
+.ui-datepicker-calendar .unavailable {
+    background-color: #999999; /* Darker background color for unavailable days */
+    color: #ffffff; /* White text color for unavailable days */
+}
+
+.unavailable {
+    background-color: #f2f2f2; /* Grey background color */
+    color: #999; /* Grey text color */
+}
+
+/* CSS styles for hovered input fields */
+input.hovered {
+    border: 2px solid #cc3366; /* Pink border when hovered */
+}
+
+/* CSS styles for clicked input fields */
+input.clicked {
+    background-color: #ffe6ea; /* Light pink background when clicked */
+}
+
+.icon {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+}
+
+.icon img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 40px; /* Add border radius for a rectangular shape */
+}

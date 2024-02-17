@@ -125,3 +125,75 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+$(function() {
+    // Function to check if a date is a weekend (Saturday or Sunday)
+    function isWeekend(date) {
+        var day = date.getDay();
+        return day === 0 || day === 6;
+    }
+
+    // Function to check if a date is unavailable for the selected employee
+    function isUnavailable(date, professional) {
+        switch (professional) {
+            case 'John Doe':
+                return date.getDay() === 1; // John Doe unavailable on Mondays
+            case 'Emma Smith':
+                return date.getDay() === 3; // Emma Smith unavailable on Wednesdays
+            case 'Sarah Johnson':
+                return date.getDay() === 5; // Sarah Johnson unavailable on Fridays
+            default:
+                return false;
+        }
+    }
+
+    // Initialize the datepicker with default availability
+    $("#date").datepicker({
+        changeYear: true,
+        changeMonth: true,
+        dateFormat: 'mm/dd/yy',
+        minDate: new Date('01/01/1900'),
+        maxDate: '+1Y',
+        beforeShowDay: function(date) {
+            var isWeekday = !isWeekend(date);
+            var professional = $('#professional').val();
+            var isAvailable = !isUnavailable(date, professional);
+
+            // Apply CSS class to grey out the unavailable dates
+            var cssClass = isAvailable ? '' : 'unavailable';
+
+            // Customize title attribute for tooltip
+            var tooltip = isAvailable ? '' : 'Not available for ' + professional;
+
+            return [isWeekday && isAvailable, cssClass, tooltip];
+        }
+    });
+
+    // Event listener for when the professional selection changes
+    $('#professional').change(function() {
+        // Update the datepicker when the professional changes
+        $("#date").datepicker('refresh');
+    });
+
+    $('input').hover(
+        function() {
+            $(this).addClass('hovered');
+        },
+        function() {
+            $(this).removeClass('hovered');
+        }
+    );
+
+    // Function to add click effect to input fields
+    $('input').click(function() {
+        $(this).addClass('clicked');
+    });
+
+    // Remove click effect after a short delay
+    $('input').mouseup(function() {
+        var inputField = $(this);
+        setTimeout(function() {
+            inputField.removeClass('clicked');
+        }, 200);
+    });
+});
