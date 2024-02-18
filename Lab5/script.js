@@ -3,7 +3,7 @@
 function bookAppointment() {
     // Get values from form elements
     var service = document.getElementById("service").value;
-    var datetime = document.getElementById("datetime").value;
+    var datetime = document.getElementById("date").value;
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
@@ -126,74 +126,29 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-$(function() {
-    // Function to check if a date is a weekend (Saturday or Sunday)
-    function isWeekend(date) {
-        var day = date.getDay();
-        return day === 0 || day === 6;
-    }
-
-    // Function to check if a date is unavailable for the selected employee
-    function isUnavailable(date, professional) {
-        switch (professional) {
-            case 'John Doe':
-                return date.getDay() === 1; // John Doe unavailable on Mondays
-            case 'Emma Smith':
-                return date.getDay() === 3; // Emma Smith unavailable on Wednesdays
-            case 'Sarah Johnson':
-                return date.getDay() === 5; // Sarah Johnson unavailable on Fridays
-            default:
-                return false;
-        }
-    }
-
-    // Initialize the datepicker with default availability
+$(document).ready(function () {
+    // Initialize the datepicker
     $("#date").datepicker({
-        changeYear: true,
-        changeMonth: true,
-        dateFormat: 'mm/dd/yy',
-        minDate: new Date('01/01/1900'),
-        maxDate: '+1Y',
-        beforeShowDay: function(date) {
-            var isWeekday = !isWeekend(date);
-            var professional = $('#professional').val();
-            var isAvailable = !isUnavailable(date, professional);
+        beforeShowDay: function (date) {
+            var day = date.getDay();
+            var unavailableDays = {
+                'John Doe': [1],    // John is unavailable on Mondays (0 is Sunday, 1 is Monday, ..., 6 is Saturday)
+                'Emma Smith': [3],  // Emma is unavailable on Wednesdays
+                'Sarah Johnson': [5]  // Sarah is unavailable on Fridays
+            };
 
-            // Apply CSS class to grey out the unavailable dates
-            var cssClass = isAvailable ? '' : 'unavailable';
+            var professional = $("#professional").val(); // Get the selected professional
 
-            // Customize title attribute for tooltip
-            var tooltip = isAvailable ? '' : 'Not available for ' + professional;
+            // Disable weekends (Saturday and Sunday)
+            if (day === 0 || day === 6) {
+                return [false, ''];
+            }
 
-            return [isWeekday && isAvailable, cssClass, tooltip];
+            if (unavailableDays.hasOwnProperty(professional)) {
+                return [unavailableDays[professional].indexOf(day) === -1, '']; // Return true if day is not in the unavailable days array
+            } else {
+                return [true, '']; // Return true by default if professional is not found
+            }
         }
-    });
-
-    // Event listener for when the professional selection changes
-    $('#professional').change(function() {
-        // Update the datepicker when the professional changes
-        $("#date").datepicker('refresh');
-    });
-
-    $('input').hover(
-        function() {
-            $(this).addClass('hovered');
-        },
-        function() {
-            $(this).removeClass('hovered');
-        }
-    );
-
-    // Function to add click effect to input fields
-    $('input').click(function() {
-        $(this).addClass('clicked');
-    });
-
-    // Remove click effect after a short delay
-    $('input').mouseup(function() {
-        var inputField = $(this);
-        setTimeout(function() {
-            inputField.removeClass('clicked');
-        }, 200);
     });
 });

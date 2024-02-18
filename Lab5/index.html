@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="scripts/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 </head>
 
 <body>
@@ -204,21 +206,29 @@
 
 <!-- Date and Time Selection -->
 <div class="form-group">
-    <label for="date">Select Date:</label>
-    <input type="text" class="form-control" id="date" name="date">
+    <label for="date">
+        <span class="ui-icon ui-icon-calendar"></span> Select Date:
+    </label><br>
+    <input type="text" class="form-control" id="date" placeholder="Select a date">
 </div>
 
 <!-- Contact Information Form -->
 <div class="form-group">
-    <label for="name">Name:</label>
+    <label for="name">
+        <span class="ui-icon ui-icon-pencil"></span>Name:
+    </label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
 </div>
 <div class="form-group">
-    <label for="email">Email:</label>
+    <label for="email">
+        <span class="ui-icon ui-icon-mail-closed"></span>E-mail:
+    </label>
     <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
 </div>
 <div class="form-group">
-    <label for="phone">Phone:</label>
+    <label for="phone">
+        <span class="ui-icon ui-icon-pencil"></span>Phone:
+    </label>
     <input type="tel" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX">
 </div>
 
@@ -293,12 +303,14 @@
         </div>
     </section>
     <!-- Bootstrap JS and custom scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+    
+
 
     <script>
         new Splide( '#image-carousel' ).mount();
