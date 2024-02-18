@@ -189,3 +189,12 @@ section#contact {
 input:hover {
   outline: 2px solid #ff69b4; /* Dark pink outline */
 }
+
+.ui-datepicker {
+    background-color: #f5f5f5; /* Light pink color */
+    padding: 10px;
+    border: 2px solid #cc3366; /* Add border *
+}
+
+
+
