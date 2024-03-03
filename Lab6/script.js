@@ -89,3 +89,22 @@ function getPastSurveyResponses() {
 
 // Call init function when the page loads
 window.onload = init;
+
+// Function to send survey data to the analyst page
+function submitSurvey(event) {
+    event.preventDefault(); // Prevent default form submission
+    
+    // Serialize form data
+    const formData = new FormData(document.getElementById('OPL_form'));
+    const queryParams = new URLSearchParams();
+    for (const [key, value] of formData.entries()) {
+        queryParams.append(key, value);
+    }
+    
+    // Redirect to analyst page with survey data as URL parameters
+    window.location.href = `analyst.html?${queryParams.toString()}`; //not sure what you called the analyst page
+}
+
+// Add event listener for form submission
+document.getElementById('OPL_form').addEventListener('submit', submitSurvey);
+
