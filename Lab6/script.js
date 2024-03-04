@@ -105,3 +105,16 @@ function getPastSurveyResponses() {
 
 // Call init function when the page loads
 window.onload = init;
+
+// Function to construct URL with survey data and navigate to survey results page
+function viewResults() {
+    const formData = new FormData(document.getElementById('OPL_form'));
+    let queryParams = '';
+
+    for (const [name, value] of formData.entries()) {
+        queryParams += `&${name}=${encodeURIComponent(value)}`;
+    }
+
+    // Redirect to survey results page with survey data as URL parameters
+    window.location.href = `surveyresult.html?${queryParams.substring(1)}`;
+}
