@@ -69,19 +69,6 @@ function displayResultsOrAnalystView(analysis, containerId) {
     }
 }
 
-// Entry point
-function init() {
-    try {
-        const surveyData = fetchSurveyResults();
-        const analysis = analyzeSurveyResults(surveyData);
-
-        displayResultsOrAnalystView(analysis, 'surveyResults'); // Display survey results
-        displayResultsOrAnalystView(analysis, 'analystView');   // Display analyst's point of view
-    } catch (error) {
-        console.error('Initialization error:', error);
-    }
-}
-
 // Function to save survey responses to local storage
 function saveSurveyResponses(formData) {
     try {
@@ -103,18 +90,18 @@ function getPastSurveyResponses() {
     }
 }
 
+// Entry point
+function init() {
+    try {
+        const surveyData = fetchSurveyResults();
+        const analysis = analyzeSurveyResults(surveyData);
+
+        displayResultsOrAnalystView(analysis, 'surveyResults'); // Display survey results
+        displayResultsOrAnalystView(analysis, 'analystView');   // Display analyst's point of view
+    } catch (error) {
+        console.error('Initialization error:', error);
+    }
+}
+
 // Call init function when the page loads
 window.onload = init;
-
-// Function to construct URL with survey data and navigate to survey results page
-function viewResults() {
-    const formData = new FormData(document.getElementById('OPL_form'));
-    let queryParams = '';
-
-    for (const [name, value] of formData.entries()) {
-        queryParams += `&${name}=${encodeURIComponent(value)}`;
-    }
-
-    // Redirect to survey results page with survey data as URL parameters
-    window.location.href = `surveyresult.html?${queryParams.substring(1)}`;
-}
