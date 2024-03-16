@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+    color: #343a40; 
+}
+
+header {
+    background-color: #dc3545; 
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px; 
+    color: #ffffff;
+    margin-bottom: 20px; 
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; 
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+nav ul li a:hover {
+    color: #f8f9fa; 
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+section {
+    margin-bottom: 30px;
+}
+
+
+footer {
+    background-color: #343a40; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 20px 0;
+}
+
+.coach-profile {
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.coach-profile img {
+    max-width: 100%; 
+    border-radius: 50%; 
+}
+
+.coach-profile h2 {
+    font-size: 24px;
+    color: #343a40; 
+    margin-bottom: 10px; 
+}
+
+.coach-profile p {
+    font-size: 16px; 
+    color: #6c757d; 
+    margin-bottom: 15px; 
+}
