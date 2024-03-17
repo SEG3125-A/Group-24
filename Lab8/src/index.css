@@ -1,0 +1,150 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* White background */
+    color: #343a40; /* Dark text */
+}
+
+/* Header styling */
+header {
+    background-color: #dc3545; /* Red background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px; /* Larger font size for title */
+    color: #fff; /* White text */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ff0; /* Yellow text on hover */
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #dc3545; /* Dark red text */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+section p {
+    font-size: 16px;
+    color: #6c757d; /* Medium dark text */
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #dc3545; /* Dark red background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Coach profile styling */
+.coach-profile {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.coach-profile img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.coach-profile h2 {
+    font-size: 24px;
+    color: #343a40; /* Dark text */
+    margin-bottom: 10px;
+}
+
+.coach-profile p {
+    font-size: 16px;
+    color: #6c757d; /* Medium dark text */
+    margin-bottom: 15px;
+}
+
+/* Equipment card styling */
+.card {
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #dc3545; /* Dark red text */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #343a40; /* Dark text */
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.btn {
+    background-color: #dc3545; /* Dark red button background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.btn:hover {
+    background-color: #ff0; /* Yellow button background on hover */
+}
