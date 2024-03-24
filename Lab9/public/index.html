@@ -7,11 +7,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/App.css">
 </head>
 <body>
+    <div id="google_translate_element"></div>
     <header class="bg-dark text-white py-4">
         <div class="container">
+            <img src="gym-logo.png" alt="Craftsmanship Gym Logo" class="logo">
             <h1 class="text-center">Craftsmanship Gym</h1>
             <nav class="text-center">
                 <a href="index.html" class="text-white mx-3">Home</a>
@@ -24,12 +27,14 @@
     </header>
 
     <main class="container my-5">
+        <div class="card">
         <section>
             <h2>Welcome to Craftsmanship Gym</h2>
             <p>Craftsmanship Gym is dedicated to the advancement of serious strength athletes. We provide a platform to assist your fitness journey.</p>
             <p>Explore our diverse range of classes designed specifically for strength athletes. Our experienced coaches specialize in bodybuilding, powerlifting, and Olympic weightlifting.</p>
             <p>Join us today and experience the difference at Craftsmanship Gym!</p>
         </section>
+    </div>
     </main>
 
     <footer class="bg-dark text-white py-3">
@@ -38,7 +43,16 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyYzj3MW6qmTHIc1pejV9r+da9a8FeM0JocFhNBGM2fWxOryCrsr9E6Y/KtIIVJj" crossorigin="anonymous"></script>
+    <script src="translation-for-all-pages.js"></script>
 </body>
 </html>

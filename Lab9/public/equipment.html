@@ -7,11 +7,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/App.css">
 </head>
 <body>
+    <div id="google_translate_element"></div>
     <header class="bg-dark text-white py-4">
         <div class="container">
+            <img src="gym-logo.png" alt="Craftsmanship Gym Logo" class="logo">
             <h1 class="text-center">Craftsmanship Gym</h1>
             <nav class="text-center">
                 <a href="index.html" class="text-white mx-3">Home</a>
@@ -25,6 +28,7 @@
 
     <main class="container my-5">
         <section>
+            <div class="card">
             <h2>Equipment at Craftsmanship Gym</h2>
             <p>Explore our top-notch equipment organized by the muscles they focus on.</p>
 
@@ -52,6 +56,7 @@
                     <!-- Add more equipment for back and biceps as needed -->
                 </div>
             </div>
+        </div>
             <!-- Add more sections for other muscle groups -->
         </section>
     </main>
@@ -62,7 +67,16 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyYzj3MW6qmTHIc1pejV9r+da9a8FeM0JocFhNBGM2fWxOryCrsr9E6Y/KtIIVJj" crossorigin="anonymous"></script>
+    <script src="translation-for-all-pages.js"></script>
 </body>
 </html>
