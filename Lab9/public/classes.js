@@ -2,6 +2,40 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
+function bookAppointment() {
+    // Get values from form elements
+    var service = document.getElementById("service").value;
+    var datetime = document.getElementById("date").value;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var professional = document.getElementById("professional").value;
+    var creditCard = document.getElementById("credit-card").value;
+    var expiryDate = document.getElementById("expiry-date").value;
+    var cvv = document.getElementById("cvv").value;
+
+    if (name.trim() === "") {
+        alert("Please enter your name.");
+        return;
+    }
+    if (phone.trim() === "" || !/^\d{3}-\d{3}-\d{4}$/.test(phone)) {
+        alert("Please enter a valid phone number in the format XXX-XXX-XXXX.");
+        return;
+    }
+    if (email.trim() === "" || !/[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$/.test(email)) {
+        alert("Please enter a valid email address");
+        return;
+    }
+    if (professional.trim() === "") {
+        alert("Please select a professional.");
+        return;
+    }
+
+    // If all validations pass, show the payment modal
+    $('#paymentModal').modal('show');
+
+}
+
 function Classes() {
     return (
         <div>

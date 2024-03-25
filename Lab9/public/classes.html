@@ -42,7 +42,7 @@
                         <li>Wednesdays: 6:00pm - 7:00pm</li>
                         <!-- Add more schedule details as needed -->
                     </ul>
-                    <button class="btn btn-primary">Book Now</button>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
                 </div>
                 <div class="col-md-6">
                     <h3>Cardio Workouts</h3>
@@ -53,7 +53,7 @@
                         <li>Thursdays: 5:00pm - 6:00pm</li>
                         <!-- Add more schedule details as needed -->
                     </ul>
-                    <button class="btn btn-primary">Book Now</button>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
                         <li>Fridays: 6:00pm - 7:00pm</li>
                         <!-- Add more schedule details as needed -->
                     </ul>
-                    <button class="btn btn-primary">Book Now</button>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
                 </div>
                 <div class="col-md-6">
                     <h3>HIIT Workouts</h3>
@@ -80,13 +80,55 @@
                         <li>Thursdays: 8:00am - 9:00am</li>
                         <!-- Add more schedule details as needed -->
                     </ul>
-                    <button class="btn btn-primary">Book Now</button>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
                 </div>
             </div>
         </div>
             <!-- Add more class sections as needed -->
         </section>
+
+        <!-- Service selection -->
+<div id="form-group">
+    <label for="service">Select a Service:</label>
+    <select class="form-control" id="service" name="service">
+        <option value="haircut">Strength Training</option>
+        <option value="haircoloring">Cardio Workouts</option>
+        <option value="hairstyling">Yoga Classes</option>
+        <option value="HIIT">HIIT Workouts</option>
+
+    </select>
+</div>
+
+
+<!-- Date and Time Selection -->
+<div class="form-group">
+    <label for="date">
+        <span class="ui-icon ui-icon-calendar"></span> Select Date:
+    </label><br>
+    <input type="text" class="form-control" id="date" placeholder="Select a date">
+</div>
+
+<!-- Contact Information Form -->
+<div class="form-group">
+    <label for="name">
+        <span class="ui-icon ui-icon-pencil"></span>Name:
+    </label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+</div>
+<div class="form-group">
+    <label for="email">
+        <span class="ui-icon ui-icon-mail-closed"></span>E-mail:
+    </label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+</div>
+<div class="form-group">
+    <label for="phone">
+        <span class="ui-icon ui-icon-pencil"></span>Phone:
+    </label>
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX">
+</div>
     </main>
+    <div id="bookingForm"></div> <!-- Add the <div> element here -->
 
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
