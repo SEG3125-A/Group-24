@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftsmanship Gym - Classes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/App.css">
+</head>
+<body>
+    <div id="google_translate_element"></div>
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <img src="gym-logo.png" alt="Craftsmanship Gym Logo" class="logo">
+            <h1 class="text-center">Craftsmanship Gym</h1>
+            <nav class="text-center">
+                <a href="index.html" class="text-white mx-3">Home</a>
+                <a href="coaches.html" class="text-white mx-3">Meet Our Coaches</a>
+                <a href="classes.html" class="text-white mx-3">Explore Classes</a>
+                <a href="equipment.html" class="text-white mx-3">Discover Equipment</a>
+                <a href="membership.html" class="text-white mx-3">Membership Options</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section>
+            <div class="card">
+            <h2>Classes at Craftsmanship Gym</h2>
+            <p>Explore our diverse range of classes designed specifically for strength athletes.</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Strength Training</h3>
+                    <p>Our strength training classes focus on building muscle mass and increasing overall strength. Suitable for all levels.</p>
+                    <p>Schedule:</p>
+                    <ul>
+                        <li>Mondays: 8:00am - 9:00am</li>
+                        <li>Wednesdays: 6:00pm - 7:00pm</li>
+                        <!-- Add more schedule details as needed -->
+                    </ul>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
+                </div>
+                <div class="col-md-6">
+                    <h3>Cardio Workouts</h3>
+                    <p>Our cardio workouts focus on improving cardiovascular health and endurance. Get ready to sweat!</p>
+                    <p>Schedule:</p>
+                    <ul>
+                        <li>Tuesdays: 7:00am - 8:00am</li>
+                        <li>Thursdays: 5:00pm - 6:00pm</li>
+                        <!-- Add more schedule details as needed -->
+                    </ul>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+
+            
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h3>Yoga Classes</h3>
+                    <p>Relax and rejuvenate with our yoga classes, focusing on flexibility, balance, and stress relief.</p>
+                    <p>Schedule:</p>
+                    <ul>
+                        <li>Wednesdays: 10:00am - 11:00am</li>
+                        <li>Fridays: 6:00pm - 7:00pm</li>
+                        <!-- Add more schedule details as needed -->
+                    </ul>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
+                </div>
+                <div class="col-md-6">
+                    <h3>HIIT Workouts</h3>
+                    <p>High-Intensity Interval Training (HIIT) classes for a full-body workout and calorie burn.</p>
+                    <p>Schedule:</p>
+                    <ul>
+                        <li>Mondays: 6:00pm - 7:00pm</li>
+                        <li>Thursdays: 8:00am - 9:00am</li>
+                        <!-- Add more schedule details as needed -->
+                    </ul>
+                    <a href="#form-group" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+            <!-- Add more class sections as needed -->
+        </section>
+
+        <!-- Service selection -->
+<div id="form-group">
+    <label for="service">Select a Service:</label>
+    <select class="form-control" id="service" name="service">
+        <option value="haircut">Strength Training</option>
+        <option value="haircoloring">Cardio Workouts</option>
+        <option value="hairstyling">Yoga Classes</option>
+        <option value="HIIT">HIIT Workouts</option>
+
+    </select>
+</div>
+
+
+<!-- Date and Time Selection -->
+<div class="form-group">
+    <label for="date">
+        <span class="ui-icon ui-icon-calendar"></span> Select Date:
+    </label><br>
+    <input type="text" class="form-control" id="date" placeholder="Select a date">
+</div>
+
+<!-- Contact Information Form -->
+<div class="form-group">
+    <label for="name">
+        <span class="ui-icon ui-icon-pencil"></span>Name:
+    </label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+</div>
+<div class="form-group">
+    <label for="email">
+        <span class="ui-icon ui-icon-mail-closed"></span>E-mail:
+    </label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+</div>
+<div class="form-group">
+    <label for="phone">
+        <span class="ui-icon ui-icon-pencil"></span>Phone:
+    </label>
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX">
+</div>
+    </main>
+    <div id="bookingForm"></div> <!-- Add the <div> element here -->
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Craftsmanship Gym. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyYzj3MW6qmTHIc1pejV9r+da9a8FeM0JocFhNBGM2fWxOryCrsr9E6Y/KtIIVJj" crossorigin="anonymous"></script>
+
+    <script src="translation-for-all-pages.js"></script>
+
+    <div class="overlay"></div>
+</body>
+</html>
